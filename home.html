@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" lang="pt-br" />
+
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <script src="script.js" defer></script>
+    <title>tip-calculator</title>
+  </head>
+
+  <body>
+    <div class="container1">
+      <div class="header">
+        <h1>SPLI<br />TTER<br /></h1>
+      </div>
+      <div class="container2">
+        <div class="coluna1">
+          <div class="item1">
+            <h3>Bill</h3>
+
+            <input type="text" id="input-bill" />
+          </div>
+          <div class="item2">
+            <h3>Select Tip %</h3>
+            <div class="button1">
+              <button class="button" value="0.05">5%</button>
+              <button class="button" value="0.10">10%</button>
+              <button class="button" value="0.15">15%</button>
+            </div>
+            <div class="button2">
+              <button class="button" value="0.25">25%</button>
+              <button class="button" value="0.50">50%</button>
+
+              <button id="myBtn" class="button custom" value="custom">
+                Custom
+              </button>
+
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Custom Tip</h2>
+                  <h3>Tip:</h3>
+                  <input
+                    id="input-modal"
+                    type="text"
+                    placeholder="Tip Percent %"
+                  />
+                  <button onclick="closemodal()">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item3">
+            <h3>Number of People</h3>
+            <input id="no-of-people" />
+          </div>
+        </div>
+
+        <div class="coluna2">
+          <div class="child1">
+            <div
+              class="tip"
+              style="display: flex; justify-content: space-between"
+            >
+              <div class="tip-child">
+                <h3>Tip Amount</h3>
+                <p>/ person</p>
+              </div>
+              <h2 id="TipAmount">$ 0.00</h2>
+            </div>
+            <div
+              class="total"
+              style="display: flex; justify-content: space-between"
+            >
+              <div class="total-child">
+                <h3>Total</h3>
+                <p>/ person</p>
+              </div>
+              <h2 id="TotalPerson">$ 0.00</h2>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <div>
+              <button class="xl-button-blue" onclick="BillFormHandler()">
+                SUBMIT
+              </button>
+            </div>
+            <div class="child2">
+              <button class="xl-button-blue" onclick="reset()">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
